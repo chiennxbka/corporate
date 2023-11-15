@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+        <a th:href="@{/}" class="logo me-auto"><img src="/img/clients/client-5.png" alt="" class="img-fluid"></a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero" th:text="#{app.header.home}"></a></li>
+                <li><a class="nav-link scrollto" href="#about" th:text="#{app.header.about}"></a></li>
+                <li><a class="nav-link scrollto" href="#services" th:text="#{app.header.services}"></a></li>
+                <li><a class="nav-link scrollto" href="#portfolio" th:text="#{app.header.portfolio}"></a></li>
+                <li><a class="nav-link scrollto" href="#team" th:text="#{app.header.team}"></a></li>
+                <li><a class="nav-link scrollto" href="#contact" th:text="#{app.header.contact}"></a></li>
+                <li><a class="getstarted scrollto" href="#about" th:text="#{app.header.get.started}"></a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+        <div class="dropdown" style="margin-left: 10%">
+            <a class="dropdown-toggle" href="javascript:void(0)" id="language-dropdown" role="button"
+               data-mdb-toggle="dropdown" aria-expanded="false">
+                <i id="swapped-language"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="language-dropdown">
+                <li>
+                    <a class="dropdown-item"><i class="flag-united-states flag"></i>English</a>
+                </li>
+                <li>
+                    <a class="dropdown-item"><i class="flag-vietnam flag"></i>Tiếng Việt</a>
+                </li>
+                <li>
+                    <a class="dropdown-item"><i class="flag-japan flag"></i>日本語</a>
+                </li>
+                <li>
+                    <a class="dropdown-item"><i class="flag-south-korea flag"></i>남한</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</header><!-- End Header -->
+<script th:inline="javascript">
+  window.onload = () => {
+    /*<![CDATA[*/
+    const currentLanguage = /*[[${language}]]*/ 'en-US';
+    /*]]>*/
+    const lang = {
+      'vi': 'Tiếng Việt',
+      'en-US': 'English',
+      'ja': '日本語',
+      'ko': '남한'
+    }
+    document.getElementById('swapped-language').className = sessionStorage.getItem('active-language') ?
+      sessionStorage.getItem('active-language') : 'flag-united-states flag'
+    const elements = document.querySelectorAll('.dropdown-item');
+    elements.forEach(e => {
+      e.addEventListener('click', function (event) {
+        const text = event.target.innerText;
+        for (const key in lang) {
+          if (lang.hasOwnProperty(key) && lang[key] === text && key !== currentLanguage) {
+            sessionStorage.setItem('active-language', event.target.childNodes[0].className);
+            window.location.replace('http://localhost:8084?language=' + key)
+          }
+        }
+      })
+    })
+  };
+</script>
+</body>
+</html>

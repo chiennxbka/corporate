@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+ 
+  <!-- Favicons -->
+  <link th:href="@{/img/favicon.png}" rel="icon">
+  <link th:href="@{/img/apple-touch-icon.png}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+  <link th:href="@{/vendor/boxicons/css/boxicons.css}" rel="stylesheet">
+  <link th:href="@{/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+  <link th:href="@{/vendor/remixicon/remixicon.css}" rel="stylesheet">
+  <link th:href="@{/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+  <link th:href="@{/vendor/sweetalert2/sweetalert2.min.css}" rel="stylesheet">
+  <link th:href="@{/vendor/mdb/mdb.min.css}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: Arsha - v4.8.0
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <div th:replace="layout/header"></div>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" th:insert="layout/section/hero"></section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg" th:insert="layout/section/clients"></section><!-- End Cliens Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about" th:insert="layout/section/about"></section><!-- End About Us Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg" th:insert="layout/section/why-us"></section><!-- End Why Us Section -->
+
+    <!-- ======= Skills Section ======= -->
+<!--    <section id="skills" class="skills" th:insert="layout/section/skills"></section>&lt;!&ndash; End Skills Section &ndash;&gt;-->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg" th:insert="layout/section/services"></section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+<!--    <section id="cta" class="cta" th:insert="layout/section/cta"></section>&lt;!&ndash; End Cta Section &ndash;&gt;-->
+
+    <!-- ======= Portfolio Section ======= -->
+<!--    <section id="portfolio" class="portfolio" th:insert="layout/section/portfolio"></section>&lt;!&ndash; End Portfolio Section &ndash;&gt;-->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg" th:insert="layout/section/team"></section><!-- End Team Section -->
+
+    <!-- ======= Pricing Section ======= -->
+<!--    <section id="pricing" class="pricing" th:insert="layout/section/pricing"></section>&lt;!&ndash; End Pricing Section &ndash;&gt;-->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg" th:insert="layout/section/faq"></section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact" th:insert="layout/section/contact"></section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <div th:replace="layout/footer"></div><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script th:src="@{/vendor/aos/aos.js}"></script>
+  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/vendor/glightbox/js/glightbox.min.js}"></script>
+  <script th:src="@{/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+  <script th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+  <script th:src="@{/vendor/waypoints/noframework.waypoints.js}"></script>
+  <script th:src="@{/vendor/php-email-form/validate.js}"></script>
+  <script th:src="@{/vendor/sweetalert2/sweetalert2.all.min.js}"></script>
+  <script th:src="@{/vendor/mdb/mdb.min.js}"></script>
+  <!-- Template Main JS File -->
+  <script th:src="@{/js/main.js}"></script>
+</body>
+</html>

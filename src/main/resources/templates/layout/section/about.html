@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <body>
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2 th:text="#{about.us}"></h2>
+        </div>
+
+        <div class="row content">
+            <div class="col-lg-6">
+                <p th:text="#{about.us.content}"></p>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0">
+                <ul>
+                    <li><i class="ri-check-double-line"></i><span th:text="#{about.us.sub-content1}"></span></li>
+                    <li><i class="ri-check-double-line"></i><span th:text="#{about.us.sub-content2}"></span></li>
+                    <li><i class="ri-check-double-line"></i><span th:text="#{about.us.sub-content3}"></span></li>
+                    <li><i class="ri-check-double-line"></i><span th:text="#{about.us.sub-content4}"></span></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    </body>
+</html>
